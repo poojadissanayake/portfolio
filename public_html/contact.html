@@ -1,21 +1,31 @@
-<div class="container" id="contact">
+<div class="container col-md-8 mx-auto mt-5" id="contact">
 
     <p class="fs-4">Get In Touch</p>
 
     <!-- To-Do: arrange the form properly  -->
-    <form>
+    <form method="POST" action="#" onsubmit="return validation()" novalidate> 
+      <!-- bootstrap not working so can't use -> class="needs-validation" novalidate -->
+
         <div class="mb-3">
           <label for="email" class="form-label">Email: </label>
-          <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+          <input type="email" class="form-control" id="email">
+          <span id="email-error" class="text-danger"></span>
         </div>
+
         <div class="mb-3">
             <label for="name" class="form-label">Name: </label>
             <input type="text" class="form-control" id="name">
+            <span id="name-error" class="text-danger"></span>
           </div>
+
           <div class="mb-3">
             <label for="message" class="form-label">Message: </label>
-            <input type="text" class="form-control" id="msg">
+            <textarea class="form-control" id="message" rows="3" maxlength="150"></textarea>
+            <span id="msg-error" class="text-danger"></span>
           </div>
+
         <button type="submit" class="btn btn-primary">Submit</button>
+
       </form>
+
 </div>
